@@ -2,7 +2,7 @@ USE b0d01dcc;
 
 #1. What percentage of total orders were shipped on the same date?
 SELECT 
-COUNT(*) * 100.0 *0  / (SELECT COUNT(*) FROM superstore),1) AS Same_Day_Shipping_Percentage
+ROUND(COUNT(*) * 100.0   / (SELECT COUNT(*) FROM superstore),2) AS Same_Day_Shipping_Percentage
 FROM superstore 
 WHERE Ship_Date = Order_Date
 
